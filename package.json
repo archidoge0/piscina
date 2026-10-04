@@ -13,6 +13,8 @@
     "lint": "standardx \"**/*.{ts,mjs,js,cjs}\" | snazzy",
     "test": "npm run lint && npm run build && npm run test-only",
     "test-only": "tap --ts",
+    "test:ci": "npm run lint && npm run build && npm run test:coverage",
+    "test:coverage" : "tap --ts --cov --coverage-report=html --no-browser --no-check-coverage",
     "prepack": "npm run build"
   },
   "repository": {
